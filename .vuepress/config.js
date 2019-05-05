@@ -1,9 +1,13 @@
 module.exports = {
-  title: 'My Book',
-  description: 'Tempor adipisicing cillum in reprehenderit occaecat fugiat incididunt et.',
+  title: 'Vuepress Starter',
+  description: 'This is a page description',
 
   themeConfig: {
     nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Chapter 1', link: '/chapter-1/' },
+      { text: 'Chapter 2', link: '/chapter-2/' },
+      { text: 'Google Example', link: 'https://google.com' },
     ],
     sidebar: [
       '/',
