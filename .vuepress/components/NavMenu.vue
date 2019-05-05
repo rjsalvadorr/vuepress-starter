@@ -29,6 +29,7 @@ export default {
 
   .page-nav {
     display: flex;
+    justify-content: flex-end;
 
     &-wrapper {
       padding: $space-unit / 2;

@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-container">
+  <div class="theme-container" @keyup.esc="toggleDebugPanel">
     <Header :title="$site.title" :desc="$site.description"></Header>
     <div class="content-wrapper">
       <slot>
@@ -7,34 +7,55 @@
       </slot>
       <Content/>
     </div>
-    <DebugPanel :siteData="$site" :pageData="$page" ></DebugPanel>
+    <Footer></Footer>
+    <DebugPanel :enabled="debugPanelEnabled" :siteData="$site" :pageData="$page" ></DebugPanel>
   </div>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 import DebugPanel from "../components/DebugPanel.vue";
 
 export default {
   name: 'Layout',
-  computed: {
-    getDebugData: () => {
-      // console.log(this.$site);
-      return JSON.stringify(`${this}`, null, 2);
-    }
+  data() {
+    return {
+      debugPanelEnabled: false,
+    };
+  },
+  methods: {
+    toggleDebugPanel() {
+      this.debugPanelEnabled = !this.debugPanelEnabled;
+    },
   },
   components: {
     Header,
+    Footer,
     DebugPanel
   }
 }
 </script>
 
-<style>
-  @import "../styles/global.scss";
+<style lang="scss">
+  /////  GLOBAL STYLES
+  @import "../styles/vars.scss";
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: $footer-bg-color;
+  }
+
+  * {
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+
 </style>
 
 <style scoped lang="scss">
+  /////  SCOPED NON-GLOBAL STYLES
   @import "../styles/vars.scss";
 
   .theme-container {
@@ -42,6 +63,6 @@ export default {
     color: $body-color;
   }
   .content-wrapper {
-    margin: $space-unit;
+    padding: $space-unit;
   }
 </style>

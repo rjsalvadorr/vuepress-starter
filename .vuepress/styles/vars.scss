@@ -18,5 +18,8 @@ $body-color: $palette-dark;
 $header-bg-color: $palette-dark;
 $header-color: #ddd;
 
-$debug-bg-color: #222;
-$debug-color: #ddd;
+$footer-bg-color: $palette-dark;
+$footer-color: #ddd;
+
+$debug-bg-color: rgba(0, 0, 0, 0.75);
+$debug-color: #eee;

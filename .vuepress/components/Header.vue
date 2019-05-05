@@ -1,7 +1,9 @@
 <template>
   <div class="page-header">
-    <h1 class="page-title">{{ title }}</h1>
-    <span class="page-desc">{{ desc }}</span>
+    <div class="header-wrapper">
+      <h1 class="page-title">{{ title }}</h1>
+      <span class="page-desc">{{ desc }}</span>
+    </div>
     <NavMenu class="nav-wrapper" :navigationLinks="$site.themeConfig.nav"></NavMenu>
   </div>
 </template>
@@ -12,8 +14,8 @@ import NavMenu from "../components/NavMenu.vue";
 export default {
   name: 'Header',
   props: {
-    title: Array,
-    desc: Array,
+    title: String,
+    desc: String,
   },
   components: {
     NavMenu,
@@ -28,12 +30,19 @@ export default {
     background-color: $header-bg-color;
     color: $header-color;
     padding: $space-unit;
+    display: flex;
 
     .page-title {
       margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .header-wrapper {
+      flex: 1 1 40%;
     }
 
     .nav-wrapper {
+      flex: 2 1 60%;
       margin-top: $space-unit;
     }
   }
