@@ -1,29 +1,20 @@
 <template>
   <div class="theme-container">
-    <h1 class="page-title">{{ $site.title }}</h1>
-    <span class="page-desc">{{ $site.description }}</span>
-
-    <nav class="page-nav">
-      <li v-for="navLink in $site.themeConfig.nav">
-        <a :href="navLink.link">{{ navLink.text }}</a>
-      </li>
-    </nav>
-
-    <slot></slot>
-    <Content/>
-
-    <div class="debug-data">
-      <h2>debug-data</h2>
-      <h3>$site</h3>
-      <code>{{ $site }}</code>
-      <h3>$page</h3>
-      <code>{{ $page }}</code>
+    <Header :title="$site.title" :desc="$site.description"></Header>
+    <div class="content-wrapper">
+      <slot>
+        <!-- if <Layout> has children, they go here -->
+      </slot>
+      <Content/>
     </div>
-
+    <DebugPanel :siteData="$site" :pageData="$page" ></DebugPanel>
   </div>
 </template>
 
 <script>
+import Header from "../components/Header.vue";
+import DebugPanel from "../components/DebugPanel.vue";
+
 export default {
   name: 'Layout',
   computed: {
@@ -31,28 +22,26 @@ export default {
       // console.log(this.$site);
       return JSON.stringify(`${this}`, null, 2);
     }
+  },
+  components: {
+    Header,
+    DebugPanel
   }
 }
 </script>
 
-<style scoped lang="scss">
-  .theme-container {
-    background-color: #00ff00;
-  }
-  .debug-data {
-    // flip display to "block"
-    // to see debug data
-    display: block;
-    font-family: monospace;
-    background-color: #222;
-    color: #ddd;
-    padding: 20px;
-    height: 300px;
-    overflow: auto;
+<style>
+  @import "../styles/global.scss";
+</style>
 
-    code {
-      display: block;
-      white-space: pre;
-    }
+<style scoped lang="scss">
+  @import "../styles/vars.scss";
+
+  .theme-container {
+    background-color: $body-bg-color;
+    color: $body-color;
+  }
+  .content-wrapper {
+    margin: $space-unit;
   }
 </style>

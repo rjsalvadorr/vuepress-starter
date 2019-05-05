@@ -1,0 +1,22 @@
+////////////////////////////////////////////////////////////////////////////////
+///// GLOBAL STYLES
+
+$space-unit: 20px;
+
+$palette-primary: #693113;
+$palette-secondary: #96894e;
+$palette-dark: #29140a;
+$palette-light1: #97a396;
+$palette-light2: #c3c9c1;
+
+////////////////////////////////////////////////////////////////////////////////
+///// SECTION-SPECIFIC STYLES
+
+$body-bg-color: $palette-light2;
+$body-color: $palette-dark;
+
+$header-bg-color: $palette-dark;
+$header-color: #ddd;
+
+$debug-bg-color: #222;
+$debug-color: #ddd;

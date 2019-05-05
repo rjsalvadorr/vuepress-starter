@@ -1,13 +1,13 @@
 module.exports = {
   title: 'Vuepress Starter',
-  description: 'This is a page description',
+  description: 'This is a page description. Data for title/desc/navbar is in .vuepress/config.js',
 
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Chapter 1', link: '/chapter-1/' },
       { text: 'Chapter 2', link: '/chapter-2/' },
-      { text: 'Google Example', link: 'https://google.com' },
+      { text: 'Google Example', link: 'https://google.com', external: true },
     ],
     sidebar: [
       '/',
@@ -25,7 +25,7 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
     ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
   serviceWorker: true
 }
