@@ -68,7 +68,7 @@ Title of the post/category
 
 ### subtitle
 
-Title of post. Appears in the post list of its category page.
+Subtitle of post. Appears in the post list of its category page.
 
 ### date
 
