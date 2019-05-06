@@ -1,4 +1,17 @@
-# A Vuepress quick start template.
+# Vuepress quick start template
+
+## Overview
+
+Designed for getting a project off the ground quickly, this project starts with
+a basic blog-style page, with content sorted in different categories.
+
+For more info, check out the [GitHub repo](https://github.com/rjsalvadorr/vuepress-starter)
+
+## To-Do
+
+- easy authoring scripts
+
+## Usage
 
 1) Install
 

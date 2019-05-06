@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Footer from "./Footer.vue";
-import DebugPanel from "./DebugPanel.vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import DebugPanel from "../components/DebugPanel.vue";
 
 export default {
   name: 'Layout',
