@@ -1,6 +1,6 @@
 {
   "name": "vuepress-starter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Vuepress quick starter",
   "main": "index.js",
   "scripts": {
@@ -9,16 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jumpalottahigh/vuepress-starter.git"
+    "url": "git+https://github.com/rjsalvadorr/vuepress-starter.git"
   },
   "keywords": [],
-  "author": "jumpalottahigh",
+  "author": "rjsalvadorr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jumpalottahigh/vuepress-starter/issues"
+    "url": "https://github.com/rjsalvadorr/vuepress-starter/issues"
   },
-  "homepage": "https://github.com/jumpalottahigh/vuepress-starter#readme",
+  "homepage": "https://github.com/rjsalvadorr/vuepress-starter#readme",
   "dependencies": {
+    "lodash": "^4.17.11",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0"
   }

@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Vuepress Starter',
-  description: 'This is a page description. Data for title/desc/navbar is in .vuepress/config.js',
+  description: 'Data for title/desc/navbar is in .vuepress/config.js',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
@@ -8,12 +8,6 @@ module.exports = {
       { text: 'Work', link: '/work/' },
       { text: 'Etc', link: '/etc/' },
       { text: 'LinkedIn', link: 'https://www.linkedin.com', external: true },
-    ],
-    sidebar: [
-      '/',
-      'work/',
-      'art/',
-      'etc/',
     ]
   },
   head: [

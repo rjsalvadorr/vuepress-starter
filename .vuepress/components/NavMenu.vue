@@ -32,9 +32,9 @@ export default {
     justify-content: flex-end;
 
     &-wrapper {
-      padding: $space-unit / 2;
-      flex: 1 1 auto;
-      text-align: center;
+      padding: 0 $space-unit;
+      flex: 0 0 auto;
+      text-align: right;
     }
 
     &-link {

@@ -1,15 +1,14 @@
 ---
 title: art-2
-subtitle:
+subtitle: subtitle example
 date: 2019-03-25 13:35:57
 type: post
-categories:
-  - art
+category: art
 ---
 
 # art-2
 
-Ut pariatur pork magna beef ribs, beef dolore pork belly turducken meatball commodo. Consequat ex salami pancetta, filet mignon elit meatball sed ut pastrami boudin doner. Swine porchetta bresaola short loin. Proident cillum meatloaf ipsum in. Short ribs ut beef beef ribs prosciutto short loin brisket tempor venison swine aliqua do exercitation. Dolore quis ut ground round.
+Ut pariatur pork magna beef ribs, beef dolore pork belly turducken meatball <!-- more --> commodo. Consequat ex salami pancetta, filet mignon elit meatball sed ut pastrami boudin doner. Swine porchetta bresaola short loin. Proident cillum meatloaf ipsum in. Short ribs ut beef beef ribs prosciutto short loin brisket tempor venison swine aliqua do exercitation. Dolore quis ut ground round.
 
 ![nope nope nope](./display-pic-4.jpg "nope nope")
 
