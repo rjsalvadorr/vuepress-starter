@@ -65,32 +65,7 @@ export default {
 
 <style lang="scss">
   /////  GLOBAL STYLES
-  @import "../styles/vars.scss";
-
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: $footer-bg-color;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  div, span, p, a, li, ol, ul, {
-    font-family: sans-serif;
-  }
-
-  code {
-    background-color: darken($body-bg-color, 10%);
-    padding: 0 $space-unit / 4;
-  }
-
-  .content-wrapper .content .language-text code {
-    display: block;
-    overflow: auto;
-    padding: $space-unit;
-  }
+  @import "../styles/global.scss";
 </style>
 
 <style scoped lang="scss">

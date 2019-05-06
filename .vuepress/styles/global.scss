@@ -1,0 +1,24 @@
+@import "./vars.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $footer-bg-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  background-color: darken($body-bg-color, 10%);
+  padding: 0 $space-unit / 4;
+}
+
+.content-wrapper .content .language-text code {
+  display: block;
+  overflow: auto;
+  padding: $space-unit;
+}
+
+@import "./text.scss";

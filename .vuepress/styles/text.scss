@@ -1,0 +1,39 @@
+div, span, p, a, li, ol, ul, {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: $link-normal;
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    color: $link-active;
+  }
+}
+
+.header-anchor {
+  text-decoration: none;
+  font-size: 75%;
+  position: absolute;
+  left: -20px;
+
+  &:link,
+  &:visited {
+    color: darken($body-bg-color, 10%);
+  }
+  
+  &:focus,
+  &:hover,
+  &:active {
+    color: darken($body-bg-color, 40%);
+  }
+}

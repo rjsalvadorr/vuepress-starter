@@ -46,6 +46,9 @@ Ipsum cow leberkas adipisicing, in picanha strip steak
 burgdoggen commodo ullamco et sausage brisket nulla cupim.
 ```
 
+This page has been configured to use these settings to build the page flow
+for various categories and pages.
+
 ### title
 
 Title of the post/category

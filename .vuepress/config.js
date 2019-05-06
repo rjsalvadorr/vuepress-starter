@@ -6,7 +6,6 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Art', link: '/art/' },
       { text: 'Work', link: '/work/' },
-      { text: 'Etc', link: '/etc/' },
       { text: 'LinkedIn', link: 'https://www.linkedin.com', external: true },
     ]
   },

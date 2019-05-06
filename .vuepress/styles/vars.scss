@@ -9,6 +9,9 @@ $palette-dark: #29140a;
 $palette-light1: #97a396;
 $palette-light2: #c3c9c1;
 
+$link-normal: $palette-primary;
+$link-active: lighten($link-normal, 15%);
+
 ////////////////////////////////////////////////////////////////////////////////
 ///// SECTION-SPECIFIC STYLES
 
@@ -21,5 +24,5 @@ $header-color: #ddd;
 $footer-bg-color: $palette-dark;
 $footer-color: #ddd;
 
-$debug-bg-color: rgba(0, 0, 0, 0.75);
+$debug-bg-color: rgba(0, 0, 0, 0.8);
 $debug-color: #eee;

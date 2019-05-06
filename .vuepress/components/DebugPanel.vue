@@ -56,6 +56,7 @@ export default {
     code {
       display: block;
       white-space: pre;
+      background: none;
     }
   }
 </style>
