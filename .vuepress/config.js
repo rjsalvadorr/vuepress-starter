@@ -1,21 +1,21 @@
 module.exports = {
   title: 'Vuepress Starter',
   description: 'This is a page description. Data for title/desc/navbar is in .vuepress/config.js',
-
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Chapter 1', link: '/chapter-1/' },
-      { text: 'Chapter 2', link: '/chapter-2/' },
-      { text: 'Google Example', link: 'https://google.com', external: true },
+      { text: 'Art', link: '/art/' },
+      { text: 'Work', link: '/work/' },
+      { text: 'Etc', link: '/etc/' },
+      { text: 'LinkedIn', link: 'https://www.linkedin.com', external: true },
     ],
     sidebar: [
       '/',
-      'chapter-1/',
-      'chapter-2/'
+      'work/',
+      'art/',
+      'etc/',
     ]
   },
-
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],

@@ -2,10 +2,9 @@
   <div class="theme-container" @keyup.esc="toggleDebugPanel">
     <Header :title="$site.title" :desc="$site.description"></Header>
     <div class="content-wrapper">
-      <slot>
-        <!-- if <Layout> has children, they go here -->
-      </slot>
-      <Content/>
+      <h1>404</h1>
+      <p>{{ getMsg() }}</p>
+      <router-link to="/">Take me home.</router-link>
     </div>
     <Footer></Footer>
     <DebugPanel :enabled="debugPanelEnabled" :siteData="$site" :pageData="$page" ></DebugPanel>
@@ -17,8 +16,15 @@ import Header from "./Header.vue";
 import Footer from "./Footer.vue";
 import DebugPanel from "./DebugPanel.vue";
 
+const msgs = [
+  `There's nothing here.`,
+  `How did we get here?`,
+  `That's a Four-Oh-Four.`,
+  `Looks like we've got some broken links.`
+]
+
 export default {
-  name: 'Layout',
+  name: 'NotFound',
   data() {
     return {
       debugPanelEnabled: false,
@@ -28,6 +34,9 @@ export default {
     toggleDebugPanel() {
       this.debugPanelEnabled = !this.debugPanelEnabled;
     },
+    getMsg () {
+      return msgs[Math.floor(Math.random() * msgs.length)]
+    }
   },
   components: {
     Header,

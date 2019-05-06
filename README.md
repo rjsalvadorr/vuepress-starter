@@ -1,7 +1,5 @@
 # A Vuepress quick start template.
 
-#### Preview: https://vuepress-starter.netlify.com/
-
 1) Install
 
 `npm i -g vuepress`

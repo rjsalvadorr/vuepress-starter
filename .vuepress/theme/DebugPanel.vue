@@ -1,9 +1,22 @@
 <template>
   <div v-if="enabled" class="debug-data">
-      <h2>debug-data</h2>
-      <h3>$site</h3>
+      <h1>debug-data</h1>
+      <p>
+        You're seeing a debugging tool for the site author.
+        If you need to leave this view, hit ESC again.
+        <br>
+        Wanna be a nice person? Email the site author, and tell them to
+        disable the debugview on the live site.
+      </p>
+
+      <hr>
+
+      <h2>$site</h2>
       <code>{{ siteData }}</code>
-      <h3>$page</h3>
+
+      <hr>
+
+      <h2>$page</h2>
       <code>{{ pageData }}</code>
     </div>
 </template>
