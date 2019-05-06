@@ -30,9 +30,9 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: $space-unit;
 
     .post-link-wrapper {
+      margin-top: $space-unit;
       flex: 0 0 30%;
     }
 

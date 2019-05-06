@@ -1,5 +1,9 @@
 ---
-category: two
+title: Work
+subtitle:
+date: 2019-03-26 13:35:57
+type: category
+category: work
 ---
 
 # Work

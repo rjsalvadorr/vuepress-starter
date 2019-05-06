@@ -80,6 +80,17 @@ export default {
   div, span, p, a, li, ol, ul, {
     font-family: sans-serif;
   }
+
+  code {
+    background-color: darken($body-bg-color, 10%);
+    padding: 0 $space-unit / 4;
+  }
+
+  .content-wrapper .content .language-text code {
+    display: block;
+    overflow: auto;
+    padding: $space-unit;
+  }
 </style>
 
 <style scoped lang="scss">
