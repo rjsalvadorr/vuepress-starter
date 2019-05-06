@@ -73,13 +73,16 @@ Title of post. Appears in the post list of its category page.
 ### date
 
 Date for post/category. Appears in the post list of its category page.
-Also used for sorting.
+Also used for sorting.  
+Expected values: date/time, formatted like `2019-03-26 13:35:57` or simply `2019-04-23` (YYYY-MM-DD)
 
 ### type
 
-Type of the object. Expected values: `post | category | link`
+Type of the object.  
+Expected values: `post | category | link`
 
 ### category
 
 Category of this object. This can be customized for the categories in the page.
-For example, a portfolio page could have categories like: `software | art | contact`.
+For example, a portfolio page could have categories like:  
+`software | art | contact`.

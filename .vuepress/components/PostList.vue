@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     getFormattedDate(rawDate) {
-      const dt = DateTime.fromISO(rawDate);
+      const dt = DateTime.fromISO(rawDate).toUTC();
       return dt.toLocaleString(DateTime.DATE_MED);
     },
     parseExcerptText(excerptHtml) {

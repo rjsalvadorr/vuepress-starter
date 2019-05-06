@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { DateTime } from "luxon";
 import filter from "lodash/filter";
 
 import Header from "../components/Header.vue";
@@ -46,10 +47,26 @@ export default {
       return pageData.frontmatter.type === 'category';
     },
     filterPostsByCategory(allPages, category) {
-      return filter(allPages, (page) => {
+      // Filtering by category
+      const filteredPosts = filter(allPages, (page) => {
         const isPost = page.frontmatter.type === "post";
         const isCorrectCategory = page.frontmatter.category === category;
         return isPost && isCorrectCategory;
+      });
+
+      // Sorting by reverse chronological order (newest first)
+      return filteredPosts.sort((post1, post2) => {
+        const dt1 = DateTime.fromISO(post1.frontmatter.date).toUTC();
+        const dt2 = DateTime.fromISO(post2.frontmatter.date).toUTC();
+
+        // post1 was written after post2
+        if(dt1 > dt2) {
+          return -1;
+        } else if(dt1 < dt2) {
+          return 1
+        }
+        // dt1 === dt2
+        return 0;
       });
     },
   },
