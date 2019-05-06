@@ -2,11 +2,12 @@
   <div class="post-links" v-if="enabled">
     <div class="post-link-wrapper" v-for="post in posts">
       <a class="post-link" :href="post.path" >
-        <img class="post-link__img" src="https://via.placeholder.com/300x300" />
+        <img class="post-link__img" :src="'/images/thumb-' + post.title + '.jpg'" />
         <div class="post-link__text">
           <h2 class="post-link__title">{{ post.frontmatter.title }}</h2>
           <span class="post-link__subtitle" v-if="post.frontmatter.subtitle">{{ post.frontmatter.subtitle }}</span>
-          <span class="post-link__date">{{ post.frontmatter.date }}</span>
+          <span class="post-link__date">{{ getFormattedDate(post.frontmatter.date) }}</span>
+          <p class="post-link__excerpt" v-if="post.excerpt">{{ parseExcerptText(post.excerpt) }}</p>
         </div>
       </a>
     </div>
@@ -14,12 +15,30 @@
 </template>
 
 <script>
+import { DateTime } from "luxon";
+
 export default {
   name: 'PostList',
   props: {
     enabled: Boolean,
     posts: Array,
   },
+  methods: {
+    getFormattedDate(rawDate) {
+      const dt = DateTime.fromISO(rawDate);
+      return dt.toLocaleString(DateTime.DATE_MED);
+    },
+    parseExcerptText(excerptHtml) {
+      /*
+       * Parses relevant content from an expected input like so:
+       * 
+       * <h1 id="art-1"><a class="header-anchor" href="#art-1" aria-hidden="true">#</a>art-1</h1>
+       * <p>Bacon ipsum dolor amet porchetta anim meatball aliquip</p>
+      */
+      const content = excerptHtml.split(/<\/?p>/);
+      return content[content.length - 2];
+    }
+  }
 }
 </script>
 

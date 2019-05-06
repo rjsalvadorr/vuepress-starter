@@ -1,30 +1,43 @@
 # Vuepress quick start
 ## Overview
 
-Designed for getting a project off the ground quickly, this project starts with
+Designed for getting a blog-style project off the ground quickly, this project starts with
 a basic blog-style page, with content sorted in different categories.
 
 For more info, check out the [GitHub repo](https://github.com/rjsalvadorr/vuepress-starter)
 
-## To-Do
-
-- easy authoring scripts
-
 ## Usage
 
-1) Install
+### 1. Install
 
-`npm i -g vuepress`
+`npm i -g vuepress`  
+or  
+`yarn global add vuepress`
 
-2) Dev
+### 2. Dev
 
-`npm start`
+`npm start`  
+or  
+`yarn start`
 
-3) Deploy
+### 3. Deploy
 
-`npm run build`
+`npm run build`  
+or  
+`yarn build`
 
 Read more about Vuepress here: https://vuepress.vuejs.org/guide/
+
+## Post Thumbnails
+
+In order to work, these have to go in `.vuepress/public/images`.There's a
+naming convention in place: `thumb-<page-name>.jpg`. So a page with content
+in `/category1/sample-title/README.md` would have a corresponding image in
+`/.vuepress/public/images/thumb-sample-title.jpg`
+
+## Page excerpts
+
+See the [VuePress docs](https://vuepress.vuejs.org/guide/custom-themes.html#content-excerpt) for more info.
 
 ## Front-matter data
 
@@ -46,7 +59,7 @@ Ipsum cow leberkas adipisicing, in picanha strip steak
 burgdoggen commodo ullamco et sausage brisket nulla cupim.
 ```
 
-This page has been configured to use these settings to build the page flow
+This site has been configured to use these settings to build the page flow
 for various categories and pages.
 
 ### title

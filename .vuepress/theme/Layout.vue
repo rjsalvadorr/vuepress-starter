@@ -46,7 +46,6 @@ export default {
       return pageData.frontmatter.type === 'category';
     },
     filterPostsByCategory(allPages, category) {
-      console.log(allPages, category);
       return filter(allPages, (page) => {
         const isPost = page.frontmatter.type === "post";
         const isCorrectCategory = page.frontmatter.category === category;
