@@ -1,15 +1,19 @@
 <template>
   <div class="post-links" v-if="enabled">
     <div class="post-link-wrapper" v-for="post in posts">
-      <a class="post-link" :href="post.path" >
-        <img class="post-link__img" :src="'/images/thumb-' + post.title + '.jpg'" />
+      <div class="post-link">
+        <a class="actual-plink" :href="post.path" >
+          <img class="post-link__img" :src="'/images/thumb-' + post.title + '.jpg'" />
+        </a>
         <div class="post-link__text">
-          <h2 class="post-link__title">{{ post.frontmatter.title }}</h2>
+          <a class="actual-plink" :href="post.path" >
+            <h2 class="post-link__title">{{ post.frontmatter.title }}</h2>
+          </a>
           <span class="post-link__subtitle" v-if="post.frontmatter.subtitle">{{ post.frontmatter.subtitle }}</span>
           <span class="post-link__date">{{ getFormattedDate(post.frontmatter.date) }}</span>
           <p class="post-link__excerpt" v-if="post.excerpt">{{ parseExcerptText(post.excerpt) }}</p>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </template>
@@ -51,8 +55,8 @@ export default {
     justify-content: space-between;
 
     .post-link-wrapper {
-      margin-top: $space-unit;
-      flex: 0 0 30%;
+      margin-top: $space-unit * 2.5;
+      flex: 0 0 calc(50% - 25px);
     }
 
     .post-link {
@@ -63,17 +67,19 @@ export default {
         float: left;
         display: inline-block;
         width: 33%;
+        border-radius: 4px;
       }
 
       &__text {
         display: inline-block;
         width: 67%;
-        padding-left: $space-unit / 2;
+        padding-left: $space-unit * 0.66;
       }
 
       &__title {
         margin-top: 0;
         margin-bottom: 5px;
+        display: inline-block;
       }
 
       &__subtitle, &__date {
