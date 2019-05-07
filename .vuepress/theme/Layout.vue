@@ -1,6 +1,6 @@
 <template>
-  <div class="theme-container" @keyup.esc="toggleDebugPanel()">
-    <Header :title="$site.title" :desc="$site.description"></Header>
+  <div :class="`theme-container theme-container--${viewportType}`" @keyup.esc="toggleDebugPanel()">
+    <Header :title="$site.title" :desc="$site.description" :viewportType="viewportType"></Header>
     <div :class="getContentClasses($page)">
       <slot>
         <!-- if <Layout> has children, they go here -->
@@ -16,6 +16,7 @@
 <script>
 import { DateTime } from "luxon";
 import filter from "lodash/filter";
+import debounce from "lodash/debounce";
 
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
@@ -27,7 +28,18 @@ export default {
   data() {
     return {
       debugPanelEnabled: false,
+      viewportType: 'phone',
     };
+  },
+  mounted() {
+    this.setViewportType(window.innerWidth);
+
+    const debouncedFunc = debounce(this.resizeHandler, 300);
+    window.addEventListener("resize", debouncedFunc);
+  },
+  beforeDestroy() {
+    const debouncedFunc = debounce(this.resizeHandler, 300);
+    window.removeEventListener("resize", debouncedFunc);
   },
   methods: {
     getContentClasses(pageData) {
@@ -45,6 +57,30 @@ export default {
     },
     isCategoryPage(pageData) {
       return pageData.frontmatter.type === 'category';
+    },
+    resizeHandler(e) {
+      const viewportWidth = e.target.innerWidth;
+      this.setViewportType(viewportWidth);
+    },
+    setViewportType(viewportWidth) {
+      if(viewportWidth > 1200) {
+        this.viewportType = 'desktop-lg';
+      }
+      else if(viewportWidth > 1000) {
+        this.viewportType = 'desktop-md';
+      }
+      else if(viewportWidth > 750) {
+        this.viewportType = 'desktop';
+      }
+      else if(viewportWidth > 550) {
+        this.viewportType = 'tablet';
+      }
+      else if(viewportWidth > 400) {
+        this.viewportType = 'phablet';
+      }
+      else {
+        this.viewportType = 'phone';
+      }
     },
     filterPostsByCategory(allPages, category) {
       // Filtering by category

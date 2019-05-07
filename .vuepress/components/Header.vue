@@ -1,5 +1,5 @@
 <template>
-  <div class="page-header">
+  <div :class="`page-header page-header--${viewportType}`">
     <div class="header-wrapper">
       <h1 class="page-title">{{ title }}</h1>
       <span class="page-desc">{{ desc }}</span>
@@ -16,6 +16,7 @@ export default {
   props: {
     title: String,
     desc: String,
+    viewportType: String,
   },
   components: {
     NavMenu,
