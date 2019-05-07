@@ -23,6 +23,12 @@ import Footer from "../components/Footer.vue";
 import PostList from "../components/PostList.vue";
 import DebugPanel from "../components/DebugPanel.vue";
 
+const debounceLength = 100;
+const debounceProps = {
+  leading: true,
+  trailing: false,
+}
+
 export default {
   name: 'Layout',
   data() {
@@ -34,12 +40,12 @@ export default {
   mounted() {
     this.setViewportType(window.innerWidth);
 
-    const debouncedFunc = debounce(this.resizeHandler, 300);
-    window.addEventListener("resize", debouncedFunc);
+    const debouncedFunc = debounce(this.resizeHandler, debounceLength);
+    window.addEventListener("resize", debouncedFunc, debounceProps);
   },
   beforeDestroy() {
-    const debouncedFunc = debounce(this.resizeHandler, 300);
-    window.removeEventListener("resize", debouncedFunc);
+    const debouncedFunc = debounce(this.resizeHandler, debounceLength);
+    window.removeEventListener("resize", debouncedFunc, debounceProps);
   },
   methods: {
     getContentClasses(pageData) {
