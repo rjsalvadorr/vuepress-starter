@@ -1,9 +1,45 @@
+$heading-margin-top: 0.66rem;
+$heading-margin-bottom: 0.66rem;
+
+body {
+  // Setting 16px as 1em
+  // Just change this variable to effectively change all text sizes.
+  // The font scale is tied directly to this (via rem units)
+  font-size: 16px;
+}
+
 div, span, p, a, li, ol, ul, {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  margin: $heading-margin-top 0 $heading-margin-bottom 0;
+  margin-block-start: $heading-margin-top;
+  margin-block-end: $heading-margin-bottom;
+}
+
+// Type scale courtesy of https://type-scale.com/
+h1 {
+  font-size: 3.052rem;
+}
+h2 {
+  font-size: 2.441rem;
+}
+h3 {
+  font-size: 1.953rem;
+}
+h4 {
+  font-size: 1.563rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
 }
 
 a {
@@ -21,19 +57,5 @@ a {
 }
 
 .header-anchor {
-  text-decoration: none;
-  font-size: 75%;
-  position: absolute;
-  left: -20px;
-
-  &:link,
-  &:visited {
-    color: darken($body-bg-color, 10%);
-  }
-  
-  &:focus,
-  &:hover,
-  &:active {
-    color: darken($body-bg-color, 40%);
-  }
+  display: none;
 }

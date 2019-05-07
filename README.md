@@ -8,19 +8,19 @@ For more info, check out the [GitHub repo](https://github.com/rjsalvadorr/vuepre
 
 ## Usage
 
-### 1. Install
+#### 1. Install
 
 `npm i -g vuepress`  
 or  
 `yarn global add vuepress`
 
-### 2. Dev
+#### 2. Dev
 
 `npm start`  
 or  
 `yarn start`
 
-### 3. Deploy
+#### 3. Deploy
 
 `npm run build`  
 or  
@@ -38,6 +38,10 @@ in `/category1/sample-title/README.md` would have a corresponding image in
 ## Page excerpts
 
 See the [VuePress docs](https://vuepress.vuejs.org/guide/custom-themes.html#content-excerpt) for more info.
+
+## Fonts
+
+The site uses Google Fonts to load fonts. See the stylesheet reference in the theme config (`.vuepress/config.js`)
 
 ## Front-matter data
 
@@ -62,26 +66,26 @@ burgdoggen commodo ullamco et sausage brisket nulla cupim.
 This site has been configured to use these settings to build the page flow
 for various categories and pages.
 
-### title
+#### title
 
 Title of the post/category
 
-### subtitle
+#### subtitle
 
 Subtitle of post. Appears in the post list of its category page.
 
-### date
+#### date
 
 Date for post/category. Appears in the post list of its category page.
 Also used for sorting.  
 Expected values: date/time, formatted like `2019-03-26 13:35:57` or simply `2019-04-23` (YYYY-MM-DD)
 
-### type
+#### type
 
 Type of the object.  
 Expected values: `post | category | link`
 
-### category
+#### category
 
 Category of this object. This can be customized for the categories in the page.
 For example, a portfolio page could have categories like:  
