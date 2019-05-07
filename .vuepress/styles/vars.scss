@@ -3,27 +3,28 @@
 
 $space-unit: 20px;
 $space-unit-half: $space-unit / 2;
+$border-radius: 4px;
 
-$palette-primary: #693113;
-$palette-secondary: #96894e;
-$palette-dark: #29140a;
-$palette-light1: #97a396;
-$palette-light2: #c3c9c1;
+$palette-primary: #854442;
+$palette-secondary: #4b3832;
+$palette-dark: #3c2f2f;
+$palette-light1: #be9b7b;
+$palette-light2: #fff4e6;
 
-$link-normal: $palette-primary;
+$link-normal: darken($palette-primary, 5%);
 $link-active: lighten($link-normal, 15%);
 
 ////////////////////////////////////////////////////////////////////////////////
 ///// SECTION-SPECIFIC STYLES
 
-$body-bg-color: $palette-light2;
+$body-bg-color: darken($palette-light2, 6%);
 $body-color: $palette-dark;
 
 $header-bg-color: $palette-dark;
-$header-color: #ddd;
+$header-color: #eee;
 
 $footer-bg-color: $palette-dark;
-$footer-color: #ddd;
+$footer-color: #eee;
 
 $debug-bg-color: rgba(0, 0, 0, 0.8);
 $debug-color: #eee;

@@ -13,6 +13,7 @@ body {
 code {
   background-color: darken($body-bg-color, 10%);
   padding: 0 $space-unit / 4;
+  border-radius: $border-radius;
 }
 
 .content-wrapper .content .language-text code {

@@ -41,7 +41,7 @@ See the [VuePress docs](https://vuepress.vuejs.org/guide/custom-themes.html#cont
 
 ## Fonts
 
-The site uses Google Fonts to load fonts. See the stylesheet reference in the theme config (`.vuepress/config.js`)
+The site uses [Google Fonts](https://fonts.google.com/about) to load fonts. See the stylesheet reference in the theme config (`.vuepress/config.js`)
 
 ## Front-matter data
 

@@ -67,7 +67,7 @@ export default {
         float: left;
         display: inline-block;
         width: 33%;
-        border-radius: 4px;
+        border-radius: $border-radius;
       }
 
       &__text {
