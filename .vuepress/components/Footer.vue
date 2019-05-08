@@ -22,5 +22,6 @@ export default {
     background-color: $footer-bg-color;
     color: $footer-color;
     padding: $space-unit;
+    box-shadow: $box-shadow-up;
   }
 </style>

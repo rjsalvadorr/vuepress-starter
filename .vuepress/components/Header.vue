@@ -47,24 +47,39 @@ export default {
 <style scoped lang="scss">
   @import "../styles/vars.scss";
 
-  $burger-width: 50px;
-  $burger-height: 50px;
 
   $title-height: 40px;
-  $title-margin: 8px;
   $desc-height: 12px;
+  $title-margin: 8px;
 
-  // 100px by the current calcs
-  $header-height: $title-height + $title-margin + $desc-height + ($space-unit * 2);
+  $title-height-mobile: 30px;
+  $desc-height-mobile: 10px;
+
+  $burger-width: 40px;
+  $burger-height: 40px;
+  $burger-width-mobile: 30px;
+  $burger-height-mobile: 30px;
 
   .page-header {
-    height: $header-height;
     background-color: $header-bg-color;
     color: $header-color;
     padding: $space-unit;
+    position: relative;
+    z-index: $z-index-header;
+    box-shadow: $box-shadow-down;
 
     .header--mobile {
       display: block;
+      
+      position: absolute;
+      z-index: $z-index-header - 2;
+      left: 0;
+      right: 0;
+      bottom: -40px;
+      padding-top: 100px;
+      padding-bottom: 20px;
+      background-color: $header-bg-color;
+      box-shadow: $box-shadow-down;
     }
     .nav-wrapper--desktop {
       display: none;
@@ -73,24 +88,29 @@ export default {
       display: block;
     }
     .mobile-burger-icon {
-      width: $burger-width;
-      height: $burger-height;
+      width: $burger-width-mobile;
+      height: $burger-height-mobile;
       fill: $header-color;
+      filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.4)); 
 
       &--open {
-        fill: darken($header-color, 25%);
+        fill: darken($header-color, 5%);
+        opacity: 0.5;
+        filter: none;
       }
     }
   }
 
   .header-top {
+    position: relative;
+    z-index: $z-index-header - 1;
     display: flex;
 
     .page-title {
       margin-top: 0;
       margin-bottom: $title-margin;
-      font-size: $title-height;
-      line-height: $title-height;
+      font-size: $title-height-mobile;
+      line-height: $title-height-mobile;
     }
 
     .page-desc {
@@ -98,8 +118,8 @@ export default {
       font-weight: 300;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
-      font-size: $desc-height;
-      line-height: $desc-height;
+      font-size: $desc-height-mobile;
+      line-height: $desc-height-mobile;
     }
 
     .header-wrapper {
@@ -109,6 +129,26 @@ export default {
     .nav-wrapper {
       flex: 2 1 50%;
       margin-top: $space-unit;
+    }
+  }
+
+  /* Larger than phablet */
+  @media (min-width: 550px) {
+    .header-top {
+      .page-title {
+        font-size: $title-height;
+        line-height: $title-height;
+      }
+
+      .page-desc {
+        font-size: $desc-height;
+        line-height: $desc-height;
+      }
+
+      .mobile-burger-icon {
+        width: $burger-width;
+        height: $burger-height;
+      }
     }
   }
 

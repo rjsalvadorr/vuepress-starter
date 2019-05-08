@@ -14,6 +14,13 @@ $palette-light2: #cccccc;
 $link-normal: lighten($palette-primary, 5%);
 $link-active: lighten($link-normal, 10%);
 
+$z-index-header: 1000;
+$z-index-overlay: 10000;
+
+$box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+$box-shadow-up: 0 -3px 8px rgba(0, 0, 0, 0.5);
+$box-shadow-down: 0 3px 8px rgba(0, 0, 0, 0.5);
+
 ////////////////////////////////////////////////////////////////////////////////
 ///// SECTION-SPECIFIC DEFINITIONS
 
