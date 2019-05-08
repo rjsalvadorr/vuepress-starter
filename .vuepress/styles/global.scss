@@ -20,17 +20,14 @@ code {
 }
 
 .content-wrapper {
-  margin-top: $body-margin-top !important;
-  padding: $space-unit;
-  min-height: 75vh;
+  padding-top: $space-unit;
+  padding-bottom: $space-unit * 3;
   max-width: 960px;
+  // 100% - headerHeight - footerHeight
+  min-height: calc(100vh - #{$expected-header-height} - #{$expected-footer-height});
   margin: 0 auto;
-
-  &--post {
-    max-width: 960px;
-  }
-
-  .content .language-text code {
+  
+  .language-text code {
     display: block;
     overflow: auto;
     padding: $space-unit;

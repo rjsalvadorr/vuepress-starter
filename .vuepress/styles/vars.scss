@@ -17,18 +17,16 @@ $link-active: lighten($link-normal, 10%);
 ////////////////////////////////////////////////////////////////////////////////
 ///// SECTION-SPECIFIC DEFINITIONS
 
-$header-height: 150px;
-$header-height-expanded: $header-height + 20px;
-$body-margin-top: $header-height;
-
 $body-bg-color: $palette-light2;
 $body-color: $palette-dark;
 
 $header-bg-color: $palette-primary;
 $header-color: #eee;
+$expected-header-height: 100px;
 
 $footer-bg-color: $palette-primary;
 $footer-color: #eee;
+$expected-footer-height: 62px;
 
 $debug-bg-color: rgba(0, 0, 0, 0.8);
 $debug-color: #eee;

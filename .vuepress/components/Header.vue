@@ -46,14 +46,18 @@ export default {
 
 <style scoped lang="scss">
   @import "../styles/vars.scss";
+
   $burger-width: 50px;
   $burger-height: 50px;
 
+  $title-height: 40px;
+  $title-margin: 8px;
+  $desc-height: 12px;
+
+  // 100px by the current calcs
+  $header-height: $title-height + $title-margin + $desc-height + ($space-unit * 2);
+
   .page-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     height: $header-height;
     background-color: $header-bg-color;
     color: $header-color;
@@ -84,7 +88,18 @@ export default {
 
     .page-title {
       margin-top: 0;
-      margin-bottom: 5px;
+      margin-bottom: $title-margin;
+      font-size: $title-height;
+      line-height: $title-height;
+    }
+
+    .page-desc {
+      display: block;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      font-size: $desc-height;
+      line-height: $desc-height;
     }
 
     .header-wrapper {
