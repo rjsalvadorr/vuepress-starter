@@ -132,8 +132,8 @@ export default {
     }
   }
 
-  /* Larger than phablet */
-  @media (min-width: 550px) {
+  /* Larger than tablet */
+  @media (min-width: 750px) {
     .header-top {
       .page-title {
         font-size: $title-height;
@@ -150,10 +150,7 @@ export default {
         height: $burger-height;
       }
     }
-  }
-
-  /* Larger than tablet */
-  @media (min-width: 750px) {
+    
     .page-header {
       .header--mobile {
         display: none;
