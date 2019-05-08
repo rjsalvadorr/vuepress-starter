@@ -5,14 +5,14 @@ $space-unit: 20px;
 $space-unit-half: $space-unit / 2;
 $border-radius: 4px;
 
-$palette-primary: #854442;
-$palette-secondary: #4b3832;
-$palette-dark: #3c2f2f;
-$palette-light1: #be9b7b;
-$palette-light2: #fff4e6;
+$palette-primary: #1a472a;
+$palette-secondary: #2a623d;
+$palette-dark: #222222;
+$palette-light1: #5d5d5d;
+$palette-light2: #cccccc;
 
-$link-normal: darken($palette-primary, 5%);
-$link-active: lighten($link-normal, 15%);
+$link-normal: lighten($palette-primary, 5%);
+$link-active: lighten($link-normal, 10%);
 
 ////////////////////////////////////////////////////////////////////////////////
 ///// SECTION-SPECIFIC DEFINITIONS
@@ -21,13 +21,13 @@ $header-height: 150px;
 $header-height-expanded: $header-height + 20px;
 $body-margin-top: $header-height;
 
-$body-bg-color: darken($palette-light2, 6%);
+$body-bg-color: $palette-light2;
 $body-color: $palette-dark;
 
-$header-bg-color: $palette-dark;
+$header-bg-color: $palette-primary;
 $header-color: #eee;
 
-$footer-bg-color: $palette-dark;
+$footer-bg-color: $palette-primary;
 $footer-color: #eee;
 
 $debug-bg-color: rgba(0, 0, 0, 0.8);
