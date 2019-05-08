@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-container" @keyup.esc="toggleDebugPanel">
+  <div class="theme-container theme-container--404" @keyup.esc="toggleDebugPanel">
     <Header :title="$site.title" :desc="$site.description"></Header>
     <div class="content-wrapper">
       <h1>404</h1>
@@ -46,25 +46,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  /////  GLOBAL STYLES
-  @import "../styles/vars.scss";
-
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: $footer-bg-color;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  div, span, p, a, li, ol, ul, {
-    font-family: sans-serif;
-  }
-</style>
-
 <style scoped lang="scss">
   /////  SCOPED NON-GLOBAL STYLES
   @import "../styles/vars.scss";
@@ -72,5 +53,15 @@ export default {
   .theme-container {
     background-color: $body-bg-color;
     color: $body-color;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &--404 .content-wrapper {
+      text-align: center;
+    }
   }
 </style>

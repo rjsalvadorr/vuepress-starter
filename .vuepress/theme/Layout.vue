@@ -1,14 +1,19 @@
 <template>
   <div class="theme-container" @keyup.esc="toggleDebugPanel()">
-    <Header :title="$site.title" :desc="$site.description"></Header>
-    <div :class="getContentClasses($page)">
-      <slot>
-        <!-- if <Layout> has children, they go here -->
-      </slot>
-      <Content/>
-      <PostList :enabled="isCategoryPage($page)" :posts="filterPostsByCategory($site.pages, $page.frontmatter.category)"></PostList>
+    <div class="theme-header">
+      <Header :title="$site.title" :desc="$site.description"></Header>
     </div>
-    <Footer></Footer>
+    <div class="theme-content">
+      <div :class="getContentClasses($page)">
+        <slot>
+          <!-- if <Layout> has children, they go here -->
+        </slot>
+        <Content>
+        </Content>
+        <PostList :enabled="isCategoryPage($page)" :posts="filterPostsByCategory($site.pages, $page.frontmatter.category)"></PostList>
+      </div>
+      <Footer></Footer>
+    </div>
     <DebugPanel :enabled="debugPanelEnabled" :siteData="$site" :pageData="$page" ></DebugPanel>
   </div>
 </template>
@@ -94,7 +99,19 @@ export default {
   @import "../styles/vars.scss";
 
   .theme-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-color: $body-bg-color;
     color: $body-color;
+    display: flex;
+    flex-direction: column;
+
+    .theme-content {
+      overflow: auto;
+      flex-grow: 1;
+    }
   }
 </style>

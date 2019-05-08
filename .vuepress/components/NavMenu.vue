@@ -38,11 +38,16 @@ export default {
     }
 
     &-link {
-      color: inherit;
+      color: $header-color;
+      font-weight: 700;
+
+      &:hover,
+      &:active {
+        color: darken($header-color, 20%);
+      }
     }
 
     &.nav-wrapper--mobile {
-      margin-top: $space-unit;
       justify-content: space-around
     }
   }
