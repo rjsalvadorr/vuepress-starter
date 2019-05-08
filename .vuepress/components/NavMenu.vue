@@ -40,5 +40,10 @@ export default {
     &-link {
       color: inherit;
     }
+
+    &.nav-wrapper--mobile {
+      margin-top: $space-unit;
+      justify-content: space-around
+    }
   }
 </style>

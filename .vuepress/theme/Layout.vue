@@ -1,6 +1,6 @@
 <template>
-  <div :class="`theme-container theme-container--${viewportType}`" @keyup.esc="toggleDebugPanel()">
-    <Header :title="$site.title" :desc="$site.description" :viewportType="viewportType"></Header>
+  <div class="theme-container" @keyup.esc="toggleDebugPanel()">
+    <Header :title="$site.title" :desc="$site.description"></Header>
     <div :class="getContentClasses($page)">
       <slot>
         <!-- if <Layout> has children, they go here -->
@@ -16,37 +16,24 @@
 <script>
 import { DateTime } from "luxon";
 import filter from "lodash/filter";
-import debounce from "lodash/debounce";
-
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import PostList from "../components/PostList.vue";
 import DebugPanel from "../components/DebugPanel.vue";
-
-const debounceLength = 100;
-const debounceProps = {
-  leading: true,
-  trailing: false,
-}
 
 export default {
   name: 'Layout',
   data() {
     return {
       debugPanelEnabled: false,
-      viewportType: 'phone',
     };
   },
-  mounted() {
-    this.setViewportType(window.innerWidth);
-
-    const debouncedFunc = debounce(this.resizeHandler, debounceLength);
-    window.addEventListener("resize", debouncedFunc, debounceProps);
-  },
-  beforeDestroy() {
-    const debouncedFunc = debounce(this.resizeHandler, debounceLength);
-    window.removeEventListener("resize", debouncedFunc, debounceProps);
-  },
+  // mounted() {
+  //   // add stuff for component mount
+  // },
+  // beforeDestroy() {
+  //   // add stuff for component cleanup
+  // },
   methods: {
     getContentClasses(pageData) {
       let classes = 'content-wrapper';
@@ -63,30 +50,6 @@ export default {
     },
     isCategoryPage(pageData) {
       return pageData.frontmatter.type === 'category';
-    },
-    resizeHandler(e) {
-      const viewportWidth = e.target.innerWidth;
-      this.setViewportType(viewportWidth);
-    },
-    setViewportType(viewportWidth) {
-      if(viewportWidth > 1200) {
-        this.viewportType = 'desktop-lg';
-      }
-      else if(viewportWidth > 1000) {
-        this.viewportType = 'desktop-md';
-      }
-      else if(viewportWidth > 750) {
-        this.viewportType = 'desktop';
-      }
-      else if(viewportWidth > 550) {
-        this.viewportType = 'tablet';
-      }
-      else if(viewportWidth > 400) {
-        this.viewportType = 'phablet';
-      }
-      else {
-        this.viewportType = 'phone';
-      }
     },
     filterPostsByCategory(allPages, category) {
       // Filtering by category
@@ -133,16 +96,5 @@ export default {
   .theme-container {
     background-color: $body-bg-color;
     color: $body-color;
-  }
-
-  .content-wrapper {
-    padding: $space-unit;
-    min-height: 75vh;
-    max-width: 960px;
-    margin: 0 auto;
-
-    &--post {
-      max-width: 960px;
-    }
   }
 </style>

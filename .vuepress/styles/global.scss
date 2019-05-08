@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////////////////////////////////
+///// GLOBAL STYLES
+
 @import "./vars.scss";
 
 body {
@@ -16,10 +19,22 @@ code {
   border-radius: $border-radius;
 }
 
-.content-wrapper .content .language-text code {
-  display: block;
-  overflow: auto;
+.content-wrapper {
+  margin-top: $body-margin-top !important;
   padding: $space-unit;
+  min-height: 75vh;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &--post {
+    max-width: 960px;
+  }
+
+  .content .language-text code {
+    display: block;
+    overflow: auto;
+    padding: $space-unit;
+  }
 }
 
 @import "./text.scss";
