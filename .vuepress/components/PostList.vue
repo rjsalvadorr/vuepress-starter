@@ -56,7 +56,7 @@ export default {
 
     .post-link-wrapper {
       margin-top: $space-unit * 2.5;
-      flex: 0 0 calc(50% - 25px);
+      flex: 0 0 100%;
     }
 
     .post-link {
@@ -66,13 +66,13 @@ export default {
       &__img {
         float: left;
         display: inline-block;
-        width: 33%;
+        width: 25%;
         border-radius: $border-radius;
       }
 
       &__text {
         display: inline-block;
-        width: 67%;
+        width: 75%;
         padding-left: $space-unit * 0.66;
       }
 
@@ -84,6 +84,27 @@ export default {
 
       &__subtitle, &__date {
         display: block;
+      }
+    }
+  }
+
+  /* Larger than tablet */
+  @media (min-width: 750px) {
+    .post-links {
+      .post-link-wrapper {
+        flex: 0 0 calc(50% - 25px);
+      }
+      .post-link {
+        display: block;
+        text-decoration: none;
+
+        &__img {
+          width: 33%;
+        }
+
+        &__text {
+          width: 67%;
+        }
       }
     }
   }

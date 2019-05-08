@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-///// GLOBAL STYLES
+///// GLOBAL DEFINITIONS
 
 $space-unit: 20px;
 $space-unit-half: $space-unit / 2;
@@ -15,7 +15,11 @@ $link-normal: darken($palette-primary, 5%);
 $link-active: lighten($link-normal, 15%);
 
 ////////////////////////////////////////////////////////////////////////////////
-///// SECTION-SPECIFIC STYLES
+///// SECTION-SPECIFIC DEFINITIONS
+
+$header-height: 150px;
+$header-height-expanded: $header-height + 20px;
+$body-margin-top: $header-height;
 
 $body-bg-color: darken($palette-light2, 6%);
 $body-color: $palette-dark;

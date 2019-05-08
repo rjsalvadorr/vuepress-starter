@@ -16,7 +16,6 @@
 <script>
 import { DateTime } from "luxon";
 import filter from "lodash/filter";
-
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import PostList from "../components/PostList.vue";
@@ -29,6 +28,12 @@ export default {
       debugPanelEnabled: false,
     };
   },
+  // mounted() {
+  //   // add stuff for component mount
+  // },
+  // beforeDestroy() {
+  //   // add stuff for component cleanup
+  // },
   methods: {
     getContentClasses(pageData) {
       let classes = 'content-wrapper';
@@ -91,16 +96,5 @@ export default {
   .theme-container {
     background-color: $body-bg-color;
     color: $body-color;
-  }
-
-  .content-wrapper {
-    padding: $space-unit;
-    min-height: 75vh;
-    max-width: 960px;
-    margin: 0 auto;
-
-    &--post {
-      max-width: 960px;
-    }
   }
 </style>

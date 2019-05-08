@@ -73,11 +73,4 @@ export default {
     background-color: $body-bg-color;
     color: $body-color;
   }
-  .content-wrapper {
-    padding: $space-unit;
-    min-height: 75vh;
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-  }
 </style>
