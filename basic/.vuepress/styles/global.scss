@@ -30,17 +30,8 @@ p {
   padding-bottom: $space-unit;
 }
 
-// /* Larger than phablet */
-// @media (min-width: 550px) {
-//   padding-bottom: $space-unit * 2;
-// }
-
-// /* Larger than tablet */
-// @media (min-width: 750px) {
-//   padding-top: $space-unit;
-//   padding-right: 0;
-//   padding-bottom: $space-unit * 3;
-//   padding-left: 0;
-// }
+img {
+  border-radius: $border-radius;
+}
 
 @import "./text.scss";

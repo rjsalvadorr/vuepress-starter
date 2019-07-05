@@ -32,12 +32,25 @@ export default {
     justify-content: space-between;
 
     &-wrapper {
-      flex: 0 0 auto;
-      text-align: right;
+      flex: 0 1 auto;
+      text-align: center;
     }
 
     &-link {
       font-weight: 700;
+    }
+  }
+
+  /* Phones and up */
+  @media (min-width: 400px) {
+    .page-nav {
+      justify-content: flex-start;
+
+      &-wrapper {
+        display: block;
+        padding-right: $space-unit;
+        text-align: left;
+      }
     }
   }
 </style>
