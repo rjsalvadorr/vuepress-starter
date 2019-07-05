@@ -54,10 +54,19 @@ export default {
     color: $body-color;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+
+    .theme-header {
+      flex: 1 1 10%;
+    }
 
     .theme-content {
+      flex: 10 1 80%;
       padding: $space-unit;
-      flex: 0 1 auto;
+    }
+
+    .theme-footer {
+      flex: 1 1 10%;
     }
   }
 </style>
