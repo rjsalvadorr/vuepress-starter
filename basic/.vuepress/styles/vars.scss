@@ -8,10 +8,10 @@ $border-radius: 4px;
 $palette-primary: #1a472a;
 $palette-secondary: #2a623d;
 $palette-dark: #222222;
-$palette-light1: #5d5d5d;
+$palette-light1: #ffd900;
 $palette-light2: #cccccc;
 
-$link-normal: lighten($palette-primary, 5%);
+$link-normal: lighten($palette-light1, 5%);
 $link-active: lighten($link-normal, 10%);
 
 $z-index-bg: 100;

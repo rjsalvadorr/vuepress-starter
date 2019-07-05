@@ -29,26 +29,15 @@ export default {
 
   .page-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     &-wrapper {
-      padding: 0 $space-unit;
       flex: 0 0 auto;
       text-align: right;
     }
 
     &-link {
-      color: $header-color;
       font-weight: 700;
-
-      &:hover,
-      &:active {
-        color: darken($header-color, 20%);
-      }
-    }
-
-    &.nav-wrapper--mobile {
-      justify-content: space-around
     }
   }
 </style>

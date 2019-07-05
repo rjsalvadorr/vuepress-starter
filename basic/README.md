@@ -2,76 +2,34 @@
 title: Home
 ---
 
-# Vuepress quick start
-## Overview
+## Basic template
 
-Designed for getting a blog-style project off the ground quickly, this project starts with
-a basic blog-style page, with content sorted in different categories.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus diam velit, eu aliquam tortor tempus vitae. Sed fermentum ac ante ut lobortis. Ut volutpat, justo sagittis pellentesque scelerisque, eros leo porttitor nisl, a pretium felis metus eget tortor. Sed eu ipsum convallis, elementum orci ac, commodo nunc. Nulla ac nulla fringilla, gravida ante non, feugiat ante. Aenean non ligula at sem egestas suscipit vitae sit amet tellus. Ut non quam est.
 
-For more info, check out the [GitHub repo](https://github.com/rjsalvadorr/vuepress-starter)
+Sed enim augue, faucibus eget pulvinar a, pretium porttitor arcu. Duis ut ullamcorper risus, eget efficitur lorem. Etiam pulvinar ornare ullamcorper. Quisque lacinia mauris blandit molestie elementum. Donec scelerisque quam nec arcu mattis, vel tempus eros imperdiet. Sed condimentum ex ultricies faucibus malesuada. Fusce nec ipsum vel elit viverra faucibus. Curabitur rhoncus ac felis a gravida.
 
-## Usage
+Nunc aliquet nec massa in facilisis. Proin vel ultricies turpis. Nullam sagittis felis nec tellus rhoncus, ut volutpat nisi porta. Maecenas vulputate mi nec erat ultricies ultrices. Etiam aliquet velit sed quam scelerisque, id tincidunt dui blandit. Donec sollicitudin rutrum purus, a mattis ante accumsan sit amet. Praesent fringilla euismod sem a venenatis. Nunc quis metus rhoncus, dapibus est at, vehicula ipsum. In ut arcu fermentum, varius quam in, dignissim turpis. Morbi sit amet malesuada enim. Integer sit amet laoreet odio. Duis commodo congue tempus. Phasellus feugiat nibh vitae viverra ullamcorper. Aliquam a nibh pellentesque, auctor odio fringilla, posuere ipsum.
 
-#### 1. Install
+Vestibulum vitae semper augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse ac nisl diam. Quisque cursus pharetra vehicula. Nullam sit amet felis pellentesque, tempus justo at, pellentesque purus. Morbi luctus quis nulla porta vehicula. Aliquam pharetra risus molestie quam mattis aliquet. Donec at massa pharetra, consequat dolor mattis, vestibulum leo. Proin ut sem ipsum. Sed hendrerit erat enim, et imperdiet libero pulvinar ut. Morbi scelerisque tincidunt neque, vel suscipit libero hendrerit vitae. Donec ac molestie erat. Duis sed risus nisl. Integer vitae sagittis risus. Phasellus bibendum volutpat nunc, mattis commodo ex porta elementum. Proin scelerisque, nulla non venenatis lobortis, dui lacus vulputate dolor, eu posuere tellus arcu id justo.
 
-`npm i -g vuepress`  
-or  
-`yarn global add vuepress`
+Sed in placerat arcu. Nam dignissim lectus at nunc vestibulum, ac rutrum turpis ornare. Cras a purus cursus lectus efficitur egestas non vel justo. Aliquam accumsan justo velit, vel porttitor magna tincidunt et. Phasellus mollis lectus ac felis tincidunt rutrum. Vivamus vitae commodo leo. Donec congue erat sed quam sodales, non tincidunt lacus facilisis. Maecenas augue turpis, tristique vitae dolor a, sollicitudin suscipit velit. Ut sodales ante lectus, at laoreet metus tempor sed. Nulla facilisi. Morbi ornare, metus at ornare rutrum, lorem ligula fringilla mauris, eu fringilla tortor sapien sit amet leo. In mauris dui, efficitur ac mauris tempor, consequat rhoncus diam.
 
-#### 2. Dev
+Donec ac lobortis dui. Maecenas at congue neque, vitae consectetur libero. Cras eget sollicitudin purus, vel convallis massa. Mauris placerat leo tellus, ac iaculis sem sodales id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi at sem fringilla, elementum massa in, mollis ex. Aenean hendrerit ligula nec augue feugiat, at facilisis elit blandit. Sed mattis mi in ipsum facilisis mattis in nec nibh. Sed non magna ut nibh imperdiet consectetur sed eget velit. Donec dignissim sem non lorem mattis, sit amet dictum quam eleifend. Integer at vulputate arcu. Donec gravida tincidunt risus non porttitor.
 
-`npm start`  
-or  
-`yarn start`
+Nulla eu tincidunt augue. Nullam lacus mi, faucibus vel dui in, egestas efficitur nulla. Fusce aliquet sapien et vulputate tincidunt. Cras tincidunt risus id lorem finibus, in posuere ante hendrerit. Vivamus vehicula orci quis tellus semper ultricies. Ut dignissim ornare tempus. Quisque non sodales tellus. Fusce elementum nibh purus, fermentum congue augue suscipit ac. Proin justo justo, dapibus semper euismod ut, dignissim vel neque. Praesent eget congue elit, non faucibus nulla. Duis nec condimentum erat.
 
-#### 3. Deploy
+Sed sit amet dui leo. Morbi eu velit vel lacus mollis dictum at nec ex. Maecenas magna augue, vehicula eget est eget, rhoncus bibendum tortor. Ut metus enim, maximus id neque sed, tempor auctor felis. Pellentesque vehicula mollis nibh, semper finibus ante vulputate eu. In hac habitasse platea dictumst. In lobortis elit eget leo suscipit, vitae posuere lorem fermentum. Duis vehicula ligula purus, a molestie velit vehicula sed. Nunc felis turpis, volutpat et dignissim a, fringilla ultrices sapien. Cras sodales placerat lacus eget rutrum. Pellentesque nec lacinia mauris. Pellentesque ut mattis augue.
 
-`npm run build`  
-or  
-`yarn build`
+Donec vitae tristique enim. Phasellus sit amet mollis arcu. Nam vulputate luctus lacus, et cursus felis vehicula at. Aenean convallis aliquet posuere. Morbi sit amet tortor ac magna pulvinar hendrerit consequat a velit. Aliquam ultricies enim a feugiat eleifend. Cras consequat purus in volutpat auctor. Mauris eleifend, orci sed rhoncus sodales, mauris odio laoreet augue, vel aliquam mi arcu et lacus. Cras in nibh non est venenatis ullamcorper. Ut malesuada pulvinar posuere.
 
-Read more about Vuepress here: https://vuepress.vuejs.org/guide/
+Integer fermentum aliquet eros a fermentum. In vitae sem sagittis, facilisis nulla nec, mollis arcu. Phasellus efficitur ligula nunc, a volutpat justo venenatis faucibus. Nulla tempus sem sit amet placerat porttitor. Nam rutrum turpis metus. Phasellus consectetur ornare leo, nec suscipit justo blandit in. Donec ullamcorper neque sed suscipit fermentum. Fusce sapien lacus, vehicula in ornare maximus, euismod ac erat. Aliquam erat volutpat. Phasellus enim tellus, dapibus ut suscipit et, dapibus tristique magna.
 
-## Links
+Phasellus aliquet rhoncus augue eget posuere. Morbi ut euismod mauris. Sed pretium rutrum tellus dapibus dapibus. Fusce velit diam, vulputate nec lobortis eget, condimentum in erat. Nunc vitae ultrices velit, quis porta dolor. Etiam non maximus odio. Donec egestas auctor quam in scelerisque. Nam viverra commodo tortor ut pellentesque. Praesent lacus tortor, varius vitae lectus et, aliquet sagittis ex. Suspendisse scelerisque, massa ac vulputate dapibus, nisi mi pulvinar nibh, quis ultrices libero nunc quis turpis. Aliquam et tincidunt urna. Cras sed sapien non dolor accumsan semper. Etiam finibus tellus ut neque suscipit, tempus mollis ex gravida. Aliquam erat volutpat. Aliquam at luctus augue, in varius dolor. Proin consequat auctor nunc, sed commodo nisl ullamcorper vel.
 
-- [Page 1](page-1/)
-- [Page 2](page-2/)
-- [Page 2](page-3/)
+Proin turpis ligula, commodo et dapibus ac, ultricies a nisl. Aenean malesuada malesuada mi, porta commodo odio imperdiet eu. Integer cursus dolor urna, id vulputate odio eleifend quis. Nunc tortor lectus, bibendum sed gravida ut, aliquet in ante. Integer gravida sodales tempus. Praesent sed vestibulum quam. Sed quis fringilla odio. Aliquam varius varius faucibus. Aliquam feugiat mollis magna a sagittis.
 
-## Post Thumbnails
+In hac habitasse platea dictumst. In eget felis dignissim, condimentum ex nec, malesuada est. Curabitur eros neque, semper quis purus nec, vestibulum pellentesque sem. Sed vel consequat erat. Duis viverra vitae massa fermentum fringilla. Nullam viverra urna sit amet convallis pellentesque. Duis id suscipit massa. Nam dui eros, rutrum venenatis cursus vel, blandit eget tellus. Nullam ut elit vitae libero dignissim sollicitudin sed eu metus. Aliquam sed risus pellentesque, egestas mauris ut, efficitur odio. Mauris tempor ante sit amet orci cursus, quis venenatis ligula placerat.
 
-In order to work, these have to go in `.vuepress/public/images`.There's a
-naming convention in place: `thumb-<page-name>.jpg`. So a page with content
-in `/category1/sample-title/README.md` would have a corresponding image in
-`/.vuepress/public/images/thumb-sample-title.jpg`
+Phasellus at varius urna, vitae auctor ante. Nullam turpis nibh, mollis in consequat in, auctor eu nulla. Nunc at mauris diam. Donec ullamcorper, ex non consequat laoreet, est magna sollicitudin est, ut blandit neque erat quis tellus. Morbi accumsan, ex a dapibus euismod, ipsum sem tempor libero, nec congue neque lectus in tellus. Aenean venenatis orci nec ipsum ullamcorper, blandit commodo orci tincidunt. Sed sagittis lorem dolor, et cursus augue finibus eget. Fusce ultricies mauris sit amet ornare finibus. Mauris cursus ut dolor et euismod. Sed ultricies ante et nisi pharetra consectetur. Suspendisse aliquam ac magna eget egestas. Pellentesque placerat nibh ut mauris imperdiet auctor. Praesent congue porta eros, nec malesuada sapien ultricies vel. Aenean ultricies justo et vestibulum suscipit. In in rutrum metus. Maecenas vulputate, felis vel gravida commodo, purus neque condimentum neque, eu vulputate felis nunc non orci.
 
-## Page excerpts
-
-See the [VuePress docs](https://vuepress.vuejs.org/guide/custom-themes.html#content-excerpt) for more info.
-
-## Fonts
-
-The site uses [Google Fonts](https://fonts.google.com/about) to load fonts. See the stylesheet reference in the theme config (`.vuepress/config.js`)
-
-## Front-matter data
-
-Added on top of every markdown document in the site. Looks like this:
-
-```
----
-title: Writing words is neat
----
-
-# Words words words
-
-Bacon ipsum dolor amet in est pork belly ex excepteur.
-Ipsum cow leberkas adipisicing, in picanha strip steak
-burgdoggen commodo ullamco et sausage brisket nulla cupim.
-```
-
-This site has been configured to use these settings to build the page flow
-for various categories and pages.
-
-#### title
-
-Title of the post/category. Appears as tab/window title on browser.
+Vestibulum id arcu scelerisque, venenatis purus quis, mollis eros. Praesent congue justo vel mauris mollis ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer orci massa, ornare ac turpis vel, volutpat ornare arcu. Duis semper venenatis augue in sodales. Etiam placerat iaculis vulputate. Fusce et eros sit amet quam condimentum laoreet. Nunc condimentum pharetra metus, a posuere massa semper a. Morbi nec lacus in mauris posuere dictum.

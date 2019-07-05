@@ -1,47 +1,22 @@
 <template>
   <div class="page-header">
-    <div class="header-top">
-      <div class="header-wrapper">
-        <h1 class="page-title">{{ title }}</h1>
-        <span class="page-desc">{{ desc }}</span>
-      </div>
-      <NavMenu class="nav-wrapper" :navigationLinks="$site.themeConfig.nav"></NavMenu>
-      <div class="btn-mobile-burger" v-on:click="toggleMobileMenu">
-        <BurgerIcon :class="getButtonClass()" />
-      </div>
+    <div class="page-text">
+      <a href="/"><h1 class="page-title">{{ title }}</h1></a>
+      <span class="page-desc">{{ desc }}</span>
     </div>
+    <NavMenu class="nav-wrapper" :navigationLinks="$site.themeConfig.nav"></NavMenu>
   </div>
 </template>
 
 <script>
 import NavMenu from "./NavMenu.vue";
-import BurgerIcon from "./BurgerIcon.vue";
 
 export default {
   name: 'Header',
-  data: function () {
-    return {
-      mobileMenuOpen: false,
-    }
-  },
   props: {
     title: String,
     desc: String,
   },
-  components: {
-    NavMenu,
-    BurgerIcon,
-  },
-  methods: {
-    toggleMobileMenu() {
-      this.mobileMenuOpen = !this.mobileMenuOpen;
-      console.log(this.mobileMenuOpen);
-    },
-    getButtonClass() {
-      const iconModifier = this.mobileMenuOpen ? 'open' : 'closed';
-      return `mobile-burger-icon mobile-burger-icon--${iconModifier}`;
-    }
-  }
 }
 </script>
 
@@ -49,6 +24,16 @@ export default {
   @import "../styles/vars.scss";
 
   .page-header {
+    background-color: $header-bg-color;
+    color: $header-color;
     padding: $space-unit;
+  }
+
+  .page-text {
+    padding-bottom: $space-unit / 2;
+  }
+
+  .page-title {
+    margin-bottom: 0
   }
 </style>

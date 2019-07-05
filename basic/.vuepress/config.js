@@ -1,11 +1,10 @@
 module.exports = {
-  title: 'Vuepress Starter',
-  description: 'Data for title/desc/navbar is in .vuepress/config.js',
+  title: 'Basic Template',
+  description: 'Donec sollicitudin rutrum purus',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Art', link: '/art/' },
-      { text: 'Work', link: '/work/' },
+      { text: 'Page 1', link: '/page-1/' },
+      { text: 'Page 2', link: '/page-2/' },
       { text: 'LinkedIn', link: 'https://www.linkedin.com', external: true },
     ]
   },
