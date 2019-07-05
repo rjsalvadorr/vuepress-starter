@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 # Vuepress quick start
 ## Overview
 
@@ -28,6 +32,12 @@ or
 
 Read more about Vuepress here: https://vuepress.vuejs.org/guide/
 
+## Links
+
+- [Page 1](page-1/)
+- [Page 2](page-2/)
+- [Page 2](page-3/)
+
 ## Post Thumbnails
 
 In order to work, these have to go in `.vuepress/public/images`.There's a
@@ -50,10 +60,6 @@ Added on top of every markdown document in the site. Looks like this:
 ```
 ---
 title: Writing words is neat
-subtitle:
-date: 2019-03-24 13:35:57
-type: post
-category: deep-thoughts
 ---
 
 # Words words words
@@ -68,25 +74,4 @@ for various categories and pages.
 
 #### title
 
-Title of the post/category
-
-#### subtitle
-
-Subtitle of post. Appears in the post list of its category page.
-
-#### date
-
-Date for post/category. Appears in the post list of its category page.
-Also used for sorting.  
-Expected values: date/time, formatted like `2019-03-26 13:35:57` or simply `2019-04-23` (YYYY-MM-DD)
-
-#### type
-
-Type of the object.  
-Expected values: `post | category | link`
-
-#### category
-
-Category of this object. This can be customized for the categories in the page.
-For example, a portfolio page could have categories like:  
-`software | art | contact`.
+Title of the post/category. Appears as tab/window title on browser.

@@ -1,12 +1,8 @@
 ---
-title: art-3
-subtitle:
-date: 2019-03-26 13:35:57
-type: post
-category: art
+title: page-3
 ---
 
-# art-3
+# page-3
 
 ![nope nope nope](./display-pic-1.jpg "nope nope")
 
