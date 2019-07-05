@@ -2,11 +2,7 @@
   <div v-if="enabled" class="debug-data">
       <h1>debug-data</h1>
       <p>
-        You're seeing a debugging tool for the site author.
-        If you need to leave this view, hit ESC again.
-        <br>
-        Wanna be a nice person? Email the site author, and tell them to
-        disable the debugview on the live site.
+        You're seeing a debugging tool for the site author. If you need to leave this view, hit ESC again.
       </p>
 
       <hr>
@@ -50,7 +46,7 @@ export default {
     bottom: 0;
     left: 0;
     z-index: 9999;
-    padding: 50px;
+    padding: $space-unit;
     overflow: auto;
 
     code {
