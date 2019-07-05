@@ -27,6 +27,7 @@ export default {
     background-color: $header-bg-color;
     color: $header-color;
     padding: $space-unit;
+    box-shadow: $box-shadow-down;
   }
 
   .page-text {
