@@ -5,13 +5,10 @@
         <h1 class="page-title">{{ title }}</h1>
         <span class="page-desc">{{ desc }}</span>
       </div>
-      <NavMenu class="nav-wrapper nav-wrapper--desktop" :navigationLinks="$site.themeConfig.nav"></NavMenu>
+      <NavMenu class="nav-wrapper" :navigationLinks="$site.themeConfig.nav"></NavMenu>
       <div class="btn-mobile-burger" v-on:click="toggleMobileMenu">
         <BurgerIcon :class="getButtonClass()" />
       </div>
-    </div>
-    <div class="header--mobile" v-if="mobileMenuOpen">
-      <NavMenu class="nav-wrapper nav-wrapper--mobile" :navigationLinks="$site.themeConfig.nav"></NavMenu>
     </div>
   </div>
 </template>
@@ -50,4 +47,8 @@ export default {
 
 <style scoped lang="scss">
   @import "../styles/vars.scss";
+
+  .page-header {
+    padding: $space-unit;
+  }
 </style>

@@ -1,15 +1,15 @@
 <template>
   <div class="theme-container" @keyup.esc="toggleDebugPanel()">
-    <Header :title="$site.title" :desc="$site.description"></Header>
+    <Header class="theme-header" :title="$site.title" :desc="$site.description"></Header>
     <div class="theme-content">
         <slot>
           <!-- if <Layout> has children, they go here -->
         </slot>
         <Content>
         </Content>
-      <Footer></Footer>
     </div>
     <DebugPanel :enabled="debugPanelEnabled" :siteData="$site" :pageData="$page" ></DebugPanel>
+    <Footer class="theme-footer"></Footer>
   </div>
 </template>
 
@@ -50,19 +50,14 @@ export default {
   @import "../styles/vars.scss";
 
   .theme-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background-color: $body-bg-color;
     color: $body-color;
     display: flex;
     flex-direction: column;
 
     .theme-content {
-      overflow: auto;
-      flex-grow: 1;
+      padding: $space-unit;
+      flex: 0 1 auto;
     }
   }
 </style>
