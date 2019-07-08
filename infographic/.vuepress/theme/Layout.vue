@@ -69,14 +69,21 @@ export default {
 
     .graphic-wrapper {
       padding: $space-unit / 2;
-      flex: 0 1 100%;
+      flex: 0 2 40%;
     }
 
     .text-wrapper {
       padding: 0 $space-unit;
       margin-bottom: $space-unit;
       overflow: auto;
-      flex: 0 1 auto;
+      flex: 1 1 60%;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .graphic-wrapper {
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -85,7 +92,7 @@ export default {
       .graphic-wrapper {
         position: absolute;
         width: 55%;
-        top: 0;
+        // top: 0;
         left: 0;
       }
 
@@ -100,7 +107,7 @@ export default {
     }
   }
 
-    @media (min-width: 750px) and (orientation: landscape) {
+  @media (min-width: 750px) and (orientation: landscape) {
     .theme-container {
       .graphic-wrapper {
         width: 67%;
@@ -112,10 +119,38 @@ export default {
     }
   }
 
-  @media (min-width: 1200px) {
-    .theme-content {
-      max-width: 1280px;
-      margin: 0 auto;
+  @media (min-width: 750px) and (orientation: portrait) {
+    .theme-container {
+      .graphic-wrapper {
+        width: 66%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) and (orientation: landscape) {
+    .theme-container {
+      .graphic-wrapper {
+        width: 50%;
+      }
+
+      .text-wrapper {
+        width: 50%;
+      }
+    }
+  }
+
+  @media (min-width: 2000px) {
+    .theme-container {
+      .graphic-wrapper {
+        width: 25%;
+        left: 25%;
+      }
+
+      .text-wrapper {
+        width: 25%;
+        right: 25%;
+      }
     }
   }
 </style>
