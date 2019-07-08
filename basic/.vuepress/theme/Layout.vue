@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import { DateTime } from "luxon";
-import filter from "lodash/filter";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import DebugPanel from "../components/DebugPanel.vue";

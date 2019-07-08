@@ -2,7 +2,7 @@
 title: Home
 ---
 
-## Basic template
+## Infographic template
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus diam velit, eu aliquam tortor tempus vitae. Sed fermentum ac ante ut lobortis. Ut volutpat, justo sagittis pellentesque scelerisque, eros leo porttitor nisl, a pretium felis metus eget tortor. Sed eu ipsum convallis, elementum orci ac, commodo nunc. Nulla ac nulla fringilla, gravida ante non, feugiat ante. Aenean non ligula at sem egestas suscipit vitae sit amet tellus. Ut non quam est.
 

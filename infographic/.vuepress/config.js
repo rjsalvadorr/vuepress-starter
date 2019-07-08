@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Basic Template',
+  title: 'Infographic Template',
   description: 'Donec sollicitudin rutrum purus',
   themeConfig: {
     nav: [

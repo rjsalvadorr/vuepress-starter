@@ -5,7 +5,10 @@
         <slot>
           <!-- if <Layout> has children, they go here -->
         </slot>
-        <Content>
+        <div class="graphic-wrapper">
+          <SampleSvg></SampleSvg>
+        </div>
+        <Content class="text-wrapper">
         </Content>
     </div>
     <DebugPanel :enabled="debugPanelEnabled" :siteData="$site" :pageData="$page" ></DebugPanel>
@@ -18,6 +21,7 @@ import { DateTime } from "luxon";
 import filter from "lodash/filter";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import SampleSvg from "../components/SampleSvg.vue";
 import DebugPanel from "../components/DebugPanel.vue";
 
 export default {
@@ -35,6 +39,7 @@ export default {
   components: {
     Header,
     Footer,
+    SampleSvg,
     DebugPanel
   }
 }
@@ -67,6 +72,13 @@ export default {
 
     .theme-footer {
       flex: 1 1 10%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .theme-content {
+      max-width: 1280px;
+      margin: 0 auto;
     }
   }
 </style>
