@@ -1,6 +1,5 @@
 <template>
   <div class="theme-container" @keyup.esc="toggleDebugPanel()">
-    <Header class="theme-header" :title="$site.title" :desc="$site.description"></Header>
     <div class="theme-content">
       <slot>
         <!-- if <Layout> has children, they go here -->
@@ -10,7 +9,6 @@
       </div>
       <Content class="text-wrapper">
       </Content>
-      <Footer class="theme-footer"></Footer>
     </div>
     <DebugPanel :enabled="debugPanelEnabled" :siteData="$site" :pageData="$page" ></DebugPanel>
   </div>
@@ -19,8 +17,6 @@
 <script>
 import { DateTime } from "luxon";
 import filter from "lodash/filter";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
 import SampleSvg from "../components/SampleSvg.vue";
 import DebugPanel from "../components/DebugPanel.vue";
 
@@ -37,8 +33,6 @@ export default {
     },
   },
   components: {
-    Header,
-    Footer,
     SampleSvg,
     DebugPanel
   }
@@ -67,37 +61,53 @@ export default {
 
     .theme-content {
       flex: 10 1 90%;
-      overflow: auto;
+      position: relative;
+      // overflow: auto;
+      display: flex;
+      flex-direction: column;
     }
 
     .graphic-wrapper {
       padding: $space-unit / 2;
+      flex: 0 1 100%;
     }
 
     .text-wrapper {
       padding: $space-unit;
       padding-top: 0;
+      overflow: auto;
+      flex: 0 1 auto;
     }
   }
 
-  @media (min-width: 750px) and (orientation: landscape) {
+  @media (min-width: 500px) and (orientation: landscape) {
     .theme-container {
-      .theme-content {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
       .graphic-wrapper {
-        flex: 0 1 67%;
+        position: absolute;
+        width: 55%;
+        top: 0;
+        left: 0;
       }
 
       .text-wrapper {
-        flex: 0 1 33%;
+        position: absolute;
+        width: 45%;
+        right: 0;
+        top: $space-unit;
+        bottom: $space-unit;
         padding-top: $space-unit;
       }
+    }
+  }
 
-      .theme-footer {
-        flex: 1 1 100%;
+    @media (min-width: 750px) and (orientation: landscape) {
+    .theme-container {
+      .graphic-wrapper {
+        width: 67%;
+      }
+
+      .text-wrapper {
+        width: 33%;
       }
     }
   }
