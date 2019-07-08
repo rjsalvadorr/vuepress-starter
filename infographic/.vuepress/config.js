@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Infographic Template',
-  description: 'Donec sollicitudin rutrum purus',
+  description: 'Maecenas vulputate mi nec erat',
   themeConfig: {
     nav: [
       { text: 'Page 1', link: '/page-1/' },

@@ -2,17 +2,17 @@
   <div class="theme-container" @keyup.esc="toggleDebugPanel()">
     <Header class="theme-header" :title="$site.title" :desc="$site.description"></Header>
     <div class="theme-content">
-        <slot>
-          <!-- if <Layout> has children, they go here -->
-        </slot>
-        <div class="graphic-wrapper">
-          <SampleSvg></SampleSvg>
-        </div>
-        <Content class="text-wrapper">
-        </Content>
+      <slot>
+        <!-- if <Layout> has children, they go here -->
+      </slot>
+      <div class="graphic-wrapper">
+        <SampleSvg></SampleSvg>
+      </div>
+      <Content class="text-wrapper">
+      </Content>
+      <Footer class="theme-footer"></Footer>
     </div>
     <DebugPanel :enabled="debugPanelEnabled" :siteData="$site" :pageData="$page" ></DebugPanel>
-    <Footer class="theme-footer"></Footer>
   </div>
 </template>
 
@@ -59,19 +59,46 @@ export default {
     color: $body-color;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 
     .theme-header {
       flex: 1 1 10%;
     }
 
     .theme-content {
-      flex: 10 1 80%;
-      padding: $space-unit;
+      flex: 10 1 90%;
+      overflow: auto;
     }
 
-    .theme-footer {
-      flex: 1 1 10%;
+    .graphic-wrapper {
+      padding: $space-unit / 2;
+    }
+
+    .text-wrapper {
+      padding: $space-unit;
+      padding-top: 0;
+    }
+  }
+
+  @media (min-width: 750px) and (orientation: landscape) {
+    .theme-container {
+      .theme-content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .graphic-wrapper {
+        flex: 0 1 67%;
+      }
+
+      .text-wrapper {
+        flex: 0 1 33%;
+        padding-top: $space-unit;
+      }
+
+      .theme-footer {
+        flex: 1 1 100%;
+      }
     }
   }
 

@@ -3,9 +3,9 @@
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns="http://www.w3.org/2000/svg"
     version="1.0"
-    width="800"
-    height="800"
+    viewBox="0 0 800 800"
     id="rgg"
+    class="sample-svg"
   >
     <g style="stroke:#000000;stroke-width:3;stroke-linejoin:round;fill:none">
     <line x1=" 35.02" y1="655.17" x2=" 55.70" y2="668.71"/>
@@ -1170,10 +1170,7 @@ export default {
 <style scoped lang="scss">
   @import "../styles/vars.scss";
 
-  .page-footer {
-    background-color: $footer-bg-color;
-    color: $footer-color;
-    padding: $space-unit;
-    box-shadow: $box-shadow-up;
+  .sample-svg {
+    width: 100%;
   }
 </style>
