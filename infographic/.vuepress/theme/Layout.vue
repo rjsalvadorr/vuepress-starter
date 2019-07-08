@@ -73,8 +73,8 @@ export default {
     }
 
     .text-wrapper {
-      padding: $space-unit;
-      padding-top: 0;
+      padding: 0 $space-unit;
+      margin-bottom: $space-unit;
       overflow: auto;
       flex: 0 1 auto;
     }
@@ -95,7 +95,7 @@ export default {
         right: 0;
         top: $space-unit;
         bottom: $space-unit;
-        padding-top: $space-unit;
+        padding: $space-unit;
       }
     }
   }
